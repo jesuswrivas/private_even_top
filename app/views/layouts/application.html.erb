@@ -10,7 +10,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
+  
   <body>
-    <%= yield %>
+    <nav> </nav>
+    <%= render partial: "shared/flash_messages" %>
+    <main><%= yield %></main>
+    <footer>   </footer>
   </body>
+
 </html>
