@@ -1,1 +1,14 @@
-<h1>All events</h1>
+
+<div class="container-fluid w-50 mt-5">
+
+    <h1 class= "text-center mb-5">All events</h1>
+   
+    
+    <div class="container custom-main-cards-container">
+        <% @all_events.each do |event|%>
+            <%= render partial: "event-preview", locals: {event: event} %> <br>
+        <% end %>
+    </div>
+
+
+</div>
