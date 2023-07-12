@@ -14,7 +14,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "New Event", new_user_event_path(current_user), class: "nav-link"%></li>
-              
+                <li><%= link_to "Your Events", user_path(current_user), class: "nav-link"%></li>
               </ul>
             </div>
           <% end %>
