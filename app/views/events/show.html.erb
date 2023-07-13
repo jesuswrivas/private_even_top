@@ -1,0 +1,75 @@
+
+<div class="container-fluid ">
+
+    <div class="container-fluid w-75">
+
+
+        <div class="row">
+            <%= @event.date.strftime("%A, %d of %B")%>
+            <h1><%= @event.name%></h1>
+               
+            <div class="col">
+
+
+            <div class="row mt-5">
+                    <div class="col">
+                    <h2>About this event</h2>
+                       <%= simple_format(@event.description) %>
+                    </div>
+                </div>
+
+
+
+            <div class="row mt-5">
+                    <div class="col">
+                    <h2>Date and hour</h2>
+                       <%= @event.date%>
+                    </div>
+                </div>
+
+
+              <div class="row mt-5">
+                    <div class="col">
+                      <h2>Place</h2>
+                       <%= simple_format(@event.address) %>
+                    </div>
+                </div>
+
+
+                    <div class="row mt-5">
+                    <div class="col">
+                      <h2>Who is comming to this event?</h2>
+                       
+                        <%= render partial: "show-list-attendees", locals: {attendees_list: @event.attendees}%>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+            <div class="col mt-5">
+
+
+            <div class="div sticky-top h-25 w-25">
+                <h5>Do you want to come?</h5>
+                <%= button_to "Attend", event_event_attendees_path(@event)%>
+            </div>
+            
+            
+            
+            
+            </div>
+
+        </div>
+
+
+
+
+
+</div>

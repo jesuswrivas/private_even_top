@@ -1,0 +1,22 @@
+<div class="container">
+    
+    
+    <% attendees_list.each do |attendee| %>
+    
+        <div class= "custom-card-main ">
+    
+            <div class="custom-card-main__title">
+                <%= attendee.email%>
+            </div>
+    
+            <div class="custom-card-main__stats">
+                <div class= "custom-card-main__stats__item">
+                    Registered at: <%= attendee.created_at.strftime('%Y-%m-%d') %>
+                </div>
+    
+            </div>
+    
+        </div>
+    <% end %>
+    
+</div>

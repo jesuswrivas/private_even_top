@@ -3,12 +3,12 @@
 <div class="container-fluid d-flex justify-content-center">
   <div class="custom-card">
     <div class="custom-card__title">
-      <h2>Create New Event</h2>
+      <h2>Edit Event</h2>
     </div>
   
     <div class="custom-card__body w-">
   
-      <%= form_with model: [@user, @new_event] do |f| %>
+      <%= form_with model: [current_user, @event] do |f| %>
 
        <div class="custom-card__body__field">
           <div class="card__label"><%= f.label :name %></div>
@@ -34,7 +34,7 @@
        
           
         <div class="custom-card__body__actions">
-          <%= f.submit "Create Event" %>
+          <%= f.submit "Update" %>
         </div>
         
       <% end %>

@@ -5,10 +5,30 @@
    
     
     <div class="container custom-main-cards-container">
-        <% @user_events_created.each do |event|%>
-            <%= render partial: "shared/event-preview", locals: {event: event} %> <br>
-        <% end %>
+            <%= render partial: "event-preview", locals: {list_of_events: current_user.events_created} %> <br>
     </div>
+
+    <div class="container">
+    
+        <div class="custom-main-cards-container">
+            <div class="container">
+                <h5>Events attended</h5>
+                <%= render partial: "shared/event-preview-small", locals:{list_of_events: current_user.attended_events.past_events}%>
+            </div>
+
+
+
+        </div>
+         <div class="custom-main-cards-container">
+            <div class="container">
+                <h5>Upcoming Events</h5>
+                 <%= render partial: "shared/event-preview-small", locals:{list_of_events: current_user.attended_events.upcoming_events}%>
+            </div>
+
+
+        </div>
+    </div>
+
 
 
 </div>

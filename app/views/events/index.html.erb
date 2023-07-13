@@ -5,9 +5,7 @@
    
     
     <div class="container custom-main-cards-container">
-        <% @all_events.each do |event|%>
-            <%= render partial: "shared/event-preview", locals: {event: event} %> <br>
-        <% end %>
+            <%= render partial: "users/event-preview", locals: {list_of_events: @all_events} %> <br>
     </div>
 
 
