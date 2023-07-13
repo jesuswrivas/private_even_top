@@ -10,6 +10,13 @@
 
 
         <div class="custom-card__body__field">
+          <div class="card__label"><%= f.label :user_name %></div>
+          <div class="card__field"><%= f.text_field :user_name%></div>
+        </div>
+
+
+
+        <div class="custom-card__body__field">
           <div class="card__label"><%= f.label :email %></div>
           <div class="card__field"><%= f.email_field :email, autofocus: true, autocomplete: "email" %></div>
         </div>

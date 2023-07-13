@@ -1,0 +1,13 @@
+<div class="container-fluid w-50 mt-5">
+
+    <h1 class= "text-center mb-5">Welcome to Event Buddy</h1>
+   
+    
+    <div class="container custom-main-cards-container">
+
+            <%= render partial: "shared/event-preview", locals: {list_of_events: @last_10_events} %> <br>
+       
+    </div>
+
+
+</div>

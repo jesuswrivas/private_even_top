@@ -1,0 +1,25 @@
+
+<% list_of_events.each do |event|%>
+
+    <div class= "custom-card-main__index">
+
+            <div class="custom-card-main__left">
+
+                <div class="custom-card-main__title--small">
+                    <%= link_to event.name, event_path(event.id)%>
+                </div>
+                <div class="custom-card-main__stats">
+                    <div class= "custom-card-main__stats__item">
+                        <%= event.created_at.strftime('%Y-%m-%d') %>
+                    </div>
+                    <div class= "custom-card-main__stats__item">
+                        <%= event.date%>
+                    </div>
+                
+                </div>
+            </div>
+
+         
+</div>
+
+<% end %>

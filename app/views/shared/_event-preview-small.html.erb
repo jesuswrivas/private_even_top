@@ -1,7 +1,6 @@
+<% list_of_events.each do |event|%>
+    <div class= "custom-card-main ">
 
-<div class= "custom-card-main ">
-
-    <% list_of_events.each do |event|%>
 
         <div class="custom-card-main__title--small"> 
             <%= link_to event.name, event_path(event.id)%> 
@@ -9,19 +8,14 @@
 
         <div class="custom-card-main__stats">
             <div class= "custom-card-main__stats__item"> 
-                <%= event.created_at.strftime('%Y-%m-%d') %>
-            </div>
-            <div class= "custom-card-main__stats__item"> 
-                <%= event.date%> 
-            </div>       
-                    
-    
+               Date: <%= event.date%> 
+            </div>             
         </div>
 
     <div class="custom-card-main__body"> 
-        <%= truncate(event.description, length: 50)%>
-        </div>
-    <% end %>
+        <%= truncate(event.description, length: 100)%>
+    </div>
+
 
 </div>
-
+<% end %>

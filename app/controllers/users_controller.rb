@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, only:[:index]
   def show
-    @user_events_created = current_user.events_created
+    @user = User.find(params[:id])
+   
     
   end
 end

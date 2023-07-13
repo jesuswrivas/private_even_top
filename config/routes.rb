@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
     devise_for :users
-    root to: "events#index"
+    root to: "pages#main"
 
     resources :events, only: [:show] do
       resources :event_attendees, only: [:create, :delete]
